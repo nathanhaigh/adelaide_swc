@@ -1,0 +1,824 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>/swcadelaide</title>
+</head>
+<body>Welcome to MoPad!<br
+/><br
+/>This pad text is synchronized as you type, so that everyone viewing this page sees the same text.&nbsp; This allows you to collaborate seamlessly on documents!<br
+/><br
+/><b>Day 1</b><br
+/><br
+/>9:00-10:30 Python basics<br
+/><br
+/>1. The Zen of Python, by Tim Peters<br
+/>&gt;&gt;&gt;import this<br
+/><br
+/>2. Convoluted counterpart of good old 'pwd'&nbsp;<br
+/>&gt;&gt;&gt;import os<br
+/>&gt;&gt;&gt;os.getcwd()<br
+/>'/home/swc_trainee/Desktop/scripts'<br
+/><br
+/>3. To extend range() to floats you can use list comprehension:<br
+/>&gt;&gt;&gt;&gt;&gt;&gt; [x + 0.5 for x in range(0, 10)]<br
+/>[0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5]<br
+/><br
+/><br
+/><i>(10:30-11:00 break)</i><br
+/>11:00-12:30 Python data structures<br
+/><br
+/><br
+/><br
+/><i>(12:30-1:00 lunch)</i><br
+/>1:00-2:00 Python control flow<br
+/>2:00-3:00 Python functions and modules<br
+/><i>(3:00-3:30 break)&nbsp;</i><br
+/>3:30-4:30 classes and objects<br
+/><br
+/><br
+/><b>Day 2</b><br
+/><br
+/>9:00-10:30 testing<br
+/><i>(10:30-11:00 break)</i><br
+/>11:00-12:30 testing<br
+/><i>(12:30-1:00 lunch)</i><br
+/>1:00-3:00 version control<br
+/><i>(3:00-3:30 break)</i><br
+/>3:30-4:30 documentation<br
+/><br
+/>&nbsp;<br
+/>Python cheatsheet:<br
+/>&nbsp;# How to comment:<br
+/># One line comment is with "#"<br
+/># Multi-line comments start and end with """ or '''<br
+/><br
+/># How to define variables<br
+/># string<br
+/>dog_dragon = "falcon" # double-quote or single-quote, doesn't matter<br
+/># integer<br
+/>number_of_seasons = 4<br
+/>#be careful!<br
+/>number_of_seasons / 5<br
+/># python returns 0!<br
+/># instead:<br
+/>number_of_seasons / float(5)<br
+/>#= 0.8. That's better.<br
+/># float<br
+/>half = 0.5<br
+/># boolean<br
+/>is_world_ending = False<br
+/><br
+/><br
+/># How to get help<br
+/>help(str)<br
+/><br
+/># How to get the type of a variable<br
+/>type(dog_dragon)<br
+/>&gt;&gt;&gt; 'str'<br
+/><br
+/># How to print<br
+/>print "hello world"<br
+/># or<br
+/>print("hello world")<br
+/><br
+/># get your current working directory<br
+/>import os<br
+/>os.getcwd()<br
+/><br
+/># How to create list containing artithmetic progression from 0-9<br
+/>range(10)<br
+/># How to generate the list from 1-9<br
+/>range(1,10)<br
+/># how to change the step size of the progression from 1 to 5<br
+/>range(1,10,5)<br
+/><br
+/># How to define a function<br
+/>def a_name(first_argument, second_argument, argument_with_default = 5):<br
+/>&nbsp;&nbsp;&nbsp; """ This is a simple function, and here is a simple description.<br
+/>&nbsp;&nbsp;&nbsp; Remember to always indent!&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; """<br
+/>&nbsp;&nbsp;&nbsp; print first_argument, second_argument, argument_with_default<br
+/>&nbsp;&nbsp;&nbsp; x = 4<br
+/>&nbsp;&nbsp;&nbsp; return x<br
+/><br
+/># How to define a class<br
+/>class Person:<br
+/>&nbsp;&nbsp;&nbsp; # The initialization method<br
+/>&nbsp;&nbsp;&nbsp; def __init__(self, person_name):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.name = person_name<br
+/>&nbsp;&nbsp;&nbsp; # An example method<br
+/>&nbsp;&nbsp;&nbsp; def introduce(self):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return "Hello, my name is " + self.name<br
+/><br
+/># How to open a file for reading<br
+/>fh = open("hello.txt", "r")<br
+/># Identical<br
+/>fh = open("hello.txt")<br
+/># How to read a line from a file<br
+/>fh.readline()<br
+/># How to read three characters from a file<br
+/>fh.read(3)<br
+/># How to write to a file<br
+/>write_file = open("example.txt", "w")<br
+/># How to write to that file<br
+/>write_file.write("Hello, I'm a line\n")<br
+/><br
+/># How to import a module<br
+/>import Bio<br
+/># How to import a method from a module<br
+/>from Bio import SeqIO<br
+/><br
+/># Some important modules for bioinformaticians:<br
+/>#biopython for all kinds of sequence manipulations, phylogenetic trees, FASTQ/FASTA parsing etc.<br
+/>#matplotlib for plotting graphs<br
+/>#numpy for matrix manipulations<br
+/>#pysam for reading and writing SAM and BAM-files<br
+/>#scipy for all kinds of statistics<br
+/><br
+/><br
+/>#Start python<br
+/>python<br
+/>#quit the python console<br
+/>quit()<br
+/>#Run python script<br
+/>python example.py<br
+/><br
+/><br
+/>Try defining a string, an integer, a float<br
+/>For extra fun, try adding each type together. Add an integer to a string, a float to an integer, a float to a string. See what happens.<br
+/><br
+/>Hint: try converting your numeric types to strings to get the concatenations to work<br
+/>Convert-methods: str(), float(), int()<br
+/><br
+/># use dir() on an object to peek inside that object to see what methods are available<br
+/>dir('string')<br
+/><br
+/><br
+/># indices in Python are zero-based<br
+/>my_list = [1,2,3,4,5,4]<br
+/># the first element in the list<br
+/>my_list[0]<br
+/># the last element in the list<br
+/>my_list[-1]<br
+/><br
+/>...<br
+/>import antigravity<br
+/>import this<br
+/>from __future_ import braces<br
+/><br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/><br
+/><b>Exercise 1</b><br
+/><br
+/>Write a Python script that takes a list of three<br
+/>or more words as arguments and prints those words<br
+/>separated by commas and sorted alphabetically, with<br
+/>the final word preceded by "and", with a period at<br
+/>the end.<br
+/><br
+/>1. get the list of arguments<br
+/>2. sort them<br
+/>3. join all of the words except the last one with a comma<br
+/>[4. capitalize the first letter]<br
+/>5. append the word "and" and the final word, and a period<br
+/>6. print the result<br
+/><br
+/>Extra credit: capitalize the first letter.<br
+/><br
+/>For example:<br
+/><br
+/>python my_script.py apple strawberry banana<br
+/>apple, banana, and strawberry.<br
+/><br
+/>Sample solution:<br
+/><i>import sys</i><br
+/><i>#&nbsp;&nbsp; 1. get the list of arguments</i><br
+/><i>#&nbsp;&nbsp; 2. sort them</i><br
+/><i>&nbsp;&nbsp;&nbsp; sorted_list = sorted(sys.argv[1:])</i><br
+/><i>#&nbsp;&nbsp; [4. capitalize the first letter]&nbsp;&nbsp;&nbsp;&nbsp;</i><br
+/><i>&nbsp;&nbsp;&nbsp; sorted_list[0] =(sorted_list[0].capitalize())</i><br
+/><br
+/><i>#3. join all of the words except the last one with a comma</i><br
+/><i>#5. append the word "and" and the final word, and a period</i><br
+/><i>#6. print the result</i><br
+/><i>&nbsp;&nbsp;&nbsp; print ', '.join(sorted_list[:-1]) + ' and ' + sorted_list[-1] + '.'</i><br
+/><br
+/><br
+/>You can use the&nbsp; Ctrl + Alt + K&nbsp; key combination to enable/disable the catching of Alt+Tab and Print Screen keys within the NX session. &lt;- brilliant to know for future setups!<br
+/><br
+/><br
+/><br
+/># SETS<br
+/><br
+/># list set functions<br
+/>dir(set)<br
+/><br
+/><b>Exercise 2</b><br
+/><br
+/>given a string (a sentence), find out how many<br
+/>unique letters A-Z it contains - capital and<br
+/>lower case shouldn't be double-counted<br
+/><br
+/>'AaAa'<br
+/><br
+/>input: some string<br
+/><br
+/>input_string = 'some string here'<br
+/>...<br
+/>print (the number of unique letters in the string)<br
+/><br
+/><br
+/><b>Exercise 2 Solution</b><br
+/><br
+/>input_string = input_string.lower()<br
+/><br
+/>letters = set(input_string)<br
+/>letters.remove(',')<br
+/>length = len(set(input_string))<br
+/>print letters<br
+/>print length<br
+/><br
+/>Alternate, slightly advanced solution:<br
+/>def count_unique(sentence):<br
+/>&nbsp;&nbsp;&nbsp; #create a string containing all the non-alpha numeric characters in the latin-alphabet<br
+/>&nbsp;&nbsp;&nbsp; delchars = ''.join(c for c in map(chr, range(256)) if not c.isalnum())<br
+/>&nbsp;&nbsp;&nbsp; #use .upper() to ensure we don't double count<br
+/>&nbsp;&nbsp;&nbsp; #use string.translate() to remove the non alpha-numeric characters that we looked up before: <a href="http://docs.python.org/2/library/string.html#string.translate">http://docs.python.org/2/library/string.html#string.translate</a><br
+/>&nbsp;&nbsp;&nbsp; sentence = set(sentence.upper().translate(None, delchars))<br
+/>&nbsp;&nbsp;&nbsp; print sentence<br
+/>&nbsp;&nbsp;&nbsp; return len(sentence)<br
+/><br
+/>extra credit:<br
+/><br
+/>given two sentences, find the # of letters they have in common, and<br
+/>the number of letters that are unique to each<br
+/><br
+/><br
+/>e.g.:<br
+/><br
+/>string1 = 'AAAAaaaa'<br
+/>string2 = 'AAAAaaaaBBBB<br
+/><br
+/>string1 = string1.lower()<br
+/>string2 = string3.lower()<br
+/><br
+/><br
+/><br
+/>set1 = set(string1)<br
+/>set2 = set(string2)<br
+/><br
+/><br
+/><br
+/>print (# of letters in common)<br
+/>print (# of letters unique to sentence 1)<br
+/>print (# of letters unique to sentence 2)<br
+/><br
+/><br
+/><br
+/># dictionaries<br
+/><br
+/>my_dict = {'a' : 1, 'b' :2, 'c' :3}<br
+/><br
+/># 'a' key<br
+/># 1 value<br
+/><br
+/><br
+/>my_dict['a'] = 4<br
+/><br
+/>my_dict.keys()<br
+/><br
+/>my_dict['a']<br
+/><br
+/><br
+/><br
+/><b>Exercise 3</b><br
+/><br
+/>&nbsp;&nbsp;<br
+/><br
+/>create a dictionary in the following format:<br
+/>{'G': (# of occurences in the string),<br
+/>'A': ...<br
+/>}<br
+/><br
+/>print the dictionary<br
+/><br
+/>hint: strings have a "count" method - see the help function to find out how to use it<br
+/><br
+/><br
+/>extra credit: print the GC content (the proportion of the string that is either G's or C's, from 0 to 1)<br
+/><br
+/><br
+/><b>Exercise 3 Solution</b><br
+/><br
+/>help(str.count)<br
+/><br
+/>input_string = "GATCAGTCGATCGACTGCTAGCTAGCTAGTACGGCGTATA"<br
+/>countA = input_string.count('A')<br
+/>countC = input_string.count('C')<br
+/>countT = input_string.count('T')<br
+/>countG = input_string.count('G')<br
+/><br
+/>dna_dict = {'A' : countA, 'G' : countG, 'C' : countC, 'T' : countT}<br
+/><br
+/>dna_dict['A']<br
+/><br
+/># GC content<br
+/>print float(dna_dict['G'] + dna_dict['C']) / len(input_string)<br
+/><br
+/>Control Flow:<br
+/><br
+/>Selection:<br
+/><br
+/>number = int(sys.argv[1])<br
+/><br
+/>if number % 2 ==0:<br
+/>&nbsp;&nbsp;&nbsp; print 'EVEN'<br
+/>elif<br
+/>&nbsp;&nbsp;&nbsp; print 'ODD'<br
+/>&nbsp;<br
+/>python checkoddeven.py 3<br
+/><br
+/>For Loop:<br
+/><br
+/>fruits = ['apple', 'orange', 'peach']<br
+/><br
+/>for fruit in fruits:<br
+/>&nbsp;&nbsp;&nbsp; print "I am a " + fruit + "."<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;# print fruit, len(fruit)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>#Exercise:&nbsp; For each item in fruits, print the content of the item and the length of the item<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/><br
+/># print fruit, len(fruit)<br
+/><br
+/><br
+/>While Loop:<br
+/><br
+/>Exercise 1<br
+/><br
+/># print fruit, len(fruit)<br
+/><br
+/>reader = open('fruits.txt', 'r')<br
+/>line = reader.readline()<br
+/><br
+/>while line != ' ':<br
+/>&nbsp;print line<br
+/>line.reader.readline()<br
+/><br
+/>Exercise 2<br
+/><br
+/>wget -U firefox <a href="http://www.gutenberg.org/cache/epub/76/pg76.txt"><u>http://www.gutenberg.org/cache/epub/76/pg76.txt</u></a><br
+/>1) Read the contents of the file pg76.txt<br
+/>2) get the length of each line and sum the lines as you go<br
+/>3) count the total number of lines in the file<br
+/><br
+/><br
+/>reader = open('pg76.txt', 'r')<br
+/>line = reader.readline()<br
+/><br
+/>total_length = 0<br
+/>line_count = 0<br
+/><br
+/>while line != ' ':<br
+/>&nbsp;total_length = len(line)<br
+/>&nbsp;sum = sum + length<br
+/>&nbsp;line.reader.readline()<br
+/><br
+/>print length<br
+/><br
+/>Exercise 3<br
+/><br
+/>wget <a href="http://seanlahman.com/files/database/lahman2012-csv.zip"><u>http://seanlahman.com/files/database/lahman2012-csv.zip</u></a><br
+/>unzip lahman2012-csv.zip<br
+/>Pitching.csv<br
+/><br
+/># Open our input file.<br
+/>reader = open('Pitching.csv', 'r')<br
+/><br
+/># Read the header line.<br
+/>line = reader.readline()<br
+/><br
+/># Get the index of the 'IPouts' colum.<br
+/>header = line.split(',')<br
+/>ipout_index = header.index('IPouts')<br
+/><br
+/># Go to the first data line.<br
+/>line = reader.readline()<br
+/><br
+/># Define our variables.<br
+/>total_outs = 0<br
+/>line_count = 0<br
+/><br
+/># Read the rest of the data line by line.<br
+/>while line != '':<br
+/>&nbsp;&nbsp;&nbsp;&nbsp; row = line.split(',')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp; value = row[ipout_index]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp; total_outs += float(value)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp; line_count += 1<br
+/>&nbsp;&nbsp;&nbsp;&nbsp; line = reader.readline()<br
+/><br
+/># Print our results<br
+/>average = total_outs / line_count<br
+/>print 'Total Outs: ' + str(total_outs)<br
+/>print 'Line Count: ' + str(line_count)<br
+/>print 'Average: ' + str(average)<br
+/><br
+/>#The alternate method of finding the index of a string in a string or list is the index() method:<br
+/>string = 'Hi, my name is bob, and I am great!'<br
+/>string.index('bob') # 15<br
+/>string.split().index('bob,') # 4<br
+/><br
+/>Thanks for this { .index() } -- that's nice<br
+/><br
+/>#So then we can loop through the file using either a while or a for loop:<br
+/>ind = -1<br
+/>sum = 0<br
+/>count = 0<br
+/>for each_line in open('Pitcher.csv','r'): # for-loops to loop through files in python are lovely<br
+/>&nbsp;&nbsp;&nbsp; if ind == -1:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ind = each_line.split().index('IPouts')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; continue<br
+/>&nbsp;&nbsp;&nbsp; sum += eachline.split()[ind] #sums all the ipouts<br
+/>&nbsp;&nbsp;&nbsp; count += 1<br
+/>&nbsp;&nbsp;&nbsp; print eachline.split()[ind] #prints all the IPouts<br
+/>print sum/float(count) #prints the average IPout<br
+/><br
+/>The Python preferred style guide is called PEP 8: <a href="http://www.python.org/dev/peps/pep-0008/">http://www.python.org/dev/peps/pep-0008/</a><br
+/><br
+/>#The python iterator interface<br
+/>#It's worth noting that any object or type in python that implements the iterator interface can be looped through using the&nbsp;<br
+/>for x in iterator:<br
+/>&nbsp;&nbsp;&nbsp; x.do_stuff()<br
+/>syntax. Examples include text files, lists, dictionaries, sets and strings.&nbsp;<br
+/><br
+/>for x in 'qwertyuiop':<br
+/>...&nbsp;&nbsp;&nbsp;&nbsp; print x<br
+/>...&nbsp;<br
+/>q<br
+/>w<br
+/>e<br
+/>r<br
+/>t<br
+/>y<br
+/>u<br
+/>i<br
+/>o<br
+/>p<br
+/><br
+/>Functions and modules:<br
+/><br
+/>Exercise 1:<br
+/>#Exercise 1:<br
+/><br
+/>#given a string 'dna', remove all 'N', return the GC-content<br
+/><br
+/><br
+/>dna&nbsp; = 'ATGCNNNNNNNN'<br
+/>dna2 = 'NGGGGGGGGGGGC'<br
+/>dna3 = 'GTGTGTGTGTGTTT'<br
+/>Exercise 2:<br
+/><br
+/># exercise 2:<br
+/><br
+/>Given a string 'filename', write a function which opens that file, iterates over all sequences, and writes a bit of stats about each sequence:<br
+/><br
+/>- print the name of each sequence<br
+/>- Count of Ns<br
+/>- GC-content without Ns<br
+/><br
+/>Print amount of sequences in that file.<br
+/><br
+/>Tips:&nbsp;<br
+/>-&nbsp; if line.startswith('&gt;') - give the name<br
+/><br
+/>&gt;Sequence 1<br
+/>ATGGGGGTGTGTGNNNNNNTGA<br
+/>&gt;Sequence 2<br
+/>ATGCCCGCGCGCGCTGA<br
+/>&gt;Sequence 3<br
+/>GGGTGGTGTGTGACAAAAAAAA<br
+/><br
+/>Example-output:<br
+/><br
+/>The sequence has name 'Sequence 1'<br
+/>It has 6 Ns, 0.5625 GC-content<br
+/>The sequence has name 'Sequence 2'<br
+/>It has 0 Ns, 0.7647058823529411&nbsp; GC-content<br
+/>The sequence has name 'Sequence 3'<br
+/>It has 0 Ns, 0.4090909090909091 GC-content<br
+/><br
+/>There are three sequences in the file.<br
+/><br
+/>def give_stats(filename):<br
+/>&nbsp;&nbsp;&nbsp; # do stuff<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>give_stats('example.fasta')<br
+/><br
+/>Solution:<br
+/><br
+/>def give_dna_stats(filename):<br
+/>&nbsp; fh = open(filename, 'r')<br
+/>&nbsp; line = fh.readline()<br
+/>&nbsp; sequence_counter = 0<br
+/>&nbsp; while line != '':<br
+/>&nbsp;&nbsp;&nbsp; line = line.rstrip()<br
+/>&nbsp;&nbsp;&nbsp; if line.startswith('&gt;'):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'The name of the sequence is ' + line<br
+/>&nbsp;&nbsp;&nbsp; else:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; line = line.upper()<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gc_count = float(line.count('G') + line.count('C'))/len(line.replace('N', ''))<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n_count = line.count('N')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'GC-content is ' +&nbsp; str(gc_count)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'There are ' + str(n_count)&nbsp; + ' Ns.'<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sequence_counter += 1<br
+/>&nbsp;&nbsp;&nbsp; line = fh.readline()<br
+/>&nbsp; print 'There are ' + str(sequence_counter) + ' sequences in the file.'<br
+/>&nbsp;&nbsp;<br
+/>give_dna_stats('example.fasta')<br
+/><br
+/>Note: the 'pass' keyword means to do nothing. Why do we have it? Because the python interpreter needs to know where to check for indenting:<br
+/><i>def my_function():</i><br
+/><i>&nbsp;&nbsp;&nbsp; #not implemented yet</i><br
+/><i>&nbsp;&nbsp;&nbsp;&nbsp;</i><br
+/><i>def my_second_function():</i><br
+/><i>&nbsp;&nbsp;&nbsp; do_stuff()</i><br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>Will raise a syntax error - the interpreter needs to see some code in the first function.<br
+/>So we add pass:<br
+/><br
+/><i>def my_function():</i><br
+/><i>&nbsp;&nbsp;&nbsp; #not implemented</i><br
+/><i>&nbsp;&nbsp;&nbsp; pass</i><br
+/><br
+/>#New-style python classes inherit from object. You don't need to know what that means necessarily, but add (object) after your class declaration as below.&nbsp; #<a href="http://docs.python.org/2/reference/datamodel.html#newstyle">http://docs.python.org/2/reference/datamodel.html#newstyle</a> if you're curious. It's not important for most applications, but it can be a bit of a 'gotcha'.<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>class Rodent(object):<br
+/>&nbsp;&nbsp;&nbsp; def __init__(self, tag_id, size ):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.tag_id = tag_id<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.size = size<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.sightings_per_month = {}<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; def is_large(self):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # return True if size is &gt; 5oz<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (self.size &gt; 5)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; def is_small(self):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # return True if size is &lt; 3oz<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (self.size &lt; 3)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; def plot(self):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # return the letter of the plot at which<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # this rodent was first captured<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return self.tag_id[0]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; def capture(self, month):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # we captured this rodent once in this month<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if month not in self.sightings_per_month:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.sightings_per_month[month] = 0<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.sightings_per_month[month] += 1<br
+/><br
+/><br
+/># dna_string.py<br
+/>&nbsp;&nbsp;&nbsp; def __init__(self, sequence):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.seq = sequence<br
+/><br
+/>&nbsp;&nbsp;&nbsp; def base_count(self, base)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return self.sequence.count(base)<br
+/><br
+/>&nbsp;&nbsp;&nbsp; def gc_content(self):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g = self.base_count('G')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = self.base_count('C')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return float(g+c)/len(self.sequence)<br
+/><br
+/><br
+/>import dna_string<br
+/><br
+/>x = dna_string.DNAString('GATC')<br
+/>x.reverse_complement<br
+/><br
+/><br
+/><br
+/><br
+/>class NucleotideString:<br
+/>&nbsp;&nbsp;&nbsp; base_complement = {'G': 'C', 'C':'G',<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'A': 'T', 'T': 'A'}<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; def __init__(self, sequence):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.sequence = sequence<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.bases = {}<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; def base_count(self, base):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if base in self.bases:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return self.bases[base]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.bases[base] = self.sequence.count(base)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return self.bases[base]<br
+/><br
+/>&nbsp;&nbsp;&nbsp; def gc_content(self):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g = self.base_count('G')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = self.base_count('C')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return float(g+c)/len(self.sequence)<br
+/><br
+/>&nbsp;&nbsp;&nbsp; def reverse_complement(self):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; complement = ''&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for base in self.sequence:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; complement = self.base_complement[base] + complement<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return complement<br
+/><br
+/><br
+/>class DNAString(NucleotideString):<br
+/>&nbsp;&nbsp;&nbsp; pass<br
+/><br
+/><br
+/>class RNAString(NucleotideString):<br
+/>&nbsp;&nbsp;&nbsp; base_complement = {'G': 'C', 'C':'G',<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'A': 'U', 'U': 'A'}<br
+/><br
+/><br
+/><br
+/><a href="http://software-carpentry.org/blog/2013/09/how-much-testing-is-enough.html">http://software-carpentry.org/blog/2013/09/how-much-testing-is-enough.html</a><br
+/><br
+/><br
+/>def nucleotideContent(dnaString):&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>'''This function must return the contribution&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>of nucleotides ATCG (as uppercase) from a given DNA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>string inside a dictionary, where each key refers to&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>a nucleotide&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>'''&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>dnaDict = {}&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>uniques=set(dnaString.upper())<br
+/>uniques=uniques.intersection(set('ACTG'))&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>for nucleotide in uniques:&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>dnaDict[nucleotide]=dnaString.count(nucleotide)&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>return dnaDict<br
+/><br
+/># Run and report&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>passes = 0&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>for (i, (seq, expected)) in enumerate(Tests):&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp; if nucleotideContent(seq) == expected:&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; passes += 1&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>else:&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp; print('test %d failed' % i)&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>print('%d/%d tests passed' % (passes, len(Tests)))<br
+/><br
+/>test = [<br
+/>&nbsp;&nbsp;&nbsp; ['gtcagtc', {'G':2, 'T':2, 'C':2, 'A':2}],<br
+/>&nbsp;&nbsp;&nbsp; ['gtagt', {'G':2, 'T':2, 'A':2}],<br
+/>&nbsp;&nbsp;&nbsp; ['GTCNGAT', {'G': 2, 'T':2, 'C':1,'A':1}']<br
+/>]<br
+/><br
+/><b><u>On importing:</u></b><br
+/>Yesterday we covered the <i>import </i>keyword very briefly. Some import tricks:<br
+/><i>import x</i><br
+/>Will import the module x (x.py) into your file. To access any of the functions and classes of x you will need to refer to them in the x namespace like so:<br
+/><i>x.y()</i><br
+/><i>x.z()</i><br
+/>However, there is another way of importing that we covered, the <i>from </i>keyword:<br
+/><i>from x import y</i><br
+/>This will <b>only</b> import y into your namespace. So:<br
+/><i>y()</i><br
+/>Will work, but<br
+/><i>z()</i><br
+/><i>x.z()</i><br
+/>Will not. There is one final way of importing code from other modules:<br
+/><i>from x import *</i><br
+/>This will import everything from the x module, so<br
+/><i>y()</i><br
+/><i>z()</i><br
+/>Will both work. <b>Use this with care</b> - more than one programmer has been burned by importing too much, and having similarly named functions/classes/methods to the ones they define.<br
+/><br
+/><br
+/><br
+/><br
+/>#creating my test_dna_starts.py file<br
+/>def dna_starts_with(st1, st2):<br
+/>&nbsp;&nbsp;&nbsp; return st1[0:len(st2)]==st2<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>def test_dna_starts_with_itself():<br
+/>&nbsp;&nbsp;&nbsp; dna='acgtgtcgat'<br
+/>&nbsp;&nbsp;&nbsp; assert dna_starts_with(dna, dna)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>def test_dna_starts_with_one():<br
+/>&nbsp;&nbsp;&nbsp; assert dna_starts_with('cgtgc', 'c')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>def test_dna_starts_with_bigger():<br
+/>&nbsp;&nbsp; dna='acgtgtcgat'<br
+/>&nbsp;&nbsp;&nbsp; assert not dna_starts_with(dna, dna+dna)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>test_dna_starts_with_itself()&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>test_dna_starts_with_one()<br
+/>test_dna_starts_with_bigger()<br
+/><br
+/>#end of file<br
+/><br
+/>on the command line (NOT ON THE PYTHON INTERPRETER), type: nosetests<br
+/><br
+/>#more about nose<br
+/><a href="http://nose.readthedocs.org/en/latest/usage.html">http://nose.readthedocs.org/en/latest/usage.html</a><br
+/># for more advanced testers, you might want to look at running nosetests like this:<br
+/>nosetests --with-coverage --cover-tests --cover-html<br
+/># what this does is run the tests and produces a HTML report (./cover/index.html) of what bits of code were covered by your tests. For more info see: <a href="http://nose.readthedocs.org/en/latest/plugins/cover.html">http://nose.readthedocs.org/en/latest/plugins/cover.html</a><br
+/># This is really useful to identify and design tests to cover portions of your code which are not yet covered by existing tests<br
+/><br
+/><br
+/><br
+/>Another simple way to check whether a number is an integer:<br
+/><br
+/>number = 5<br
+/>type(number) == int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # returns True<br
+/>type(number) == float&nbsp;&nbsp;&nbsp; # returns False<br
+/><br
+/><br
+/><br
+/>In nose, if you expect a function to fail (you give it invalid input, for example) you can test whether you get the exception you expected:<br
+/><br
+/>from nose.tools import assert_raises<br
+/>assert_raises(ValueError)<br
+/><br
+/><br
+/><br
+/><br
+/>def factorial(n):<br
+/>&nbsp;&nbsp;&nbsp; '''Return the factorial of n, an integer &gt;= 0<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; &gt;&gt;&gt; factorial(4)<br
+/>&nbsp;&nbsp;&nbsp; 24<br
+/>&nbsp;&nbsp;&nbsp; '''<br
+/>&nbsp;&nbsp;&nbsp; import math<br
+/>&nbsp;&nbsp;&nbsp; if not n &gt;= 0:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; raise ValueError('n must be &gt;= 0')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; if math.floor(n) != n:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; raise ValueError('n must be integer')<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; result = 1<br
+/>&nbsp;&nbsp;&nbsp; factor = 2<br
+/>&nbsp;&nbsp;&nbsp; while factor &lt;= n:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result *= factor<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; factor +=&nbsp; 1<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>&nbsp;&nbsp;&nbsp; return result<br
+/><br
+/>if __name__ == '__main__':<br
+/>&nbsp;&nbsp;&nbsp; # when importing this file, the doctests aren't run<br
+/>&nbsp;&nbsp;&nbsp; # but when you run the file with python, the doctests are run<br
+/>&nbsp;&nbsp;&nbsp; import doctest<br
+/>&nbsp;&nbsp;&nbsp; doctest.testmod()<br
+/><br
+/><br
+/><br
+/>#User-friendly unit testing in R:<br
+/><a href="http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/">http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/</a><br
+/><br
+/><br
+/><br
+/><b><u>HARDCORE MODE:</u></b><br
+/>So, out of this workshop, you've decided that you really like Python. Of course you have, it's great. But you spend a lot of time doing <b><u>HARDCORE</u> </b>calculations with huge amounts of data, far beyond that sissy netbook that Nathan carries around. Here's some things to keep in mind:<br
+/><b>Parallelisation</b><br
+/>Parallelising code is tricky at the best of times, and the way to do it in Python is using the&nbsp;<br
+/><i>multiprocessing </i>module. <a href="http://docs.python.org/2/library/multiprocehttps://etherpad.mozilla.orgssing.html">http://docs.python.org/2/library/multiprocehttps://etherpad.mozilla.orgssing.html</a> is the place to find information about that. If you're doing something that you expect will need parallelisation, you should read the docs <u>first. </u>There are some things that you should keep in mind at the design phase, so do your homework.<br
+/><b>Speed and Memory Use</b><br
+/>Python is pretty good for casual usage, and premature optimisation is the doom of all programmers. However, the time will come when you need to speed things up, or reduce that dictionary using all 128GB of your memory. You can write superfast C extensions to python, but for most of your huge bioinformatic data needs, I think NumPy and SciPy will be great. Go look them up.&nbsp;<br
+/><b>Super Hardcore Mode</b><br
+/>So most python users use CPython, the reference interpreter of Python. BUT other versions exist, and they are often faster. Check out PyPy, Cython and Jython! Be warned, these things tend to be somewhat enthusiast, and I don't label them <b>Super Hardcore </b>for no reason.<br
+/><br
+/><br
+/><b>More Info</b><br
+/>There was a really great talk on using Python in scientific computing at Pycon-AU 2013 in Hobart. Luckily for you, they recorded it for the benefit of all those without time machines:<br
+/><a href="https://www.youtube.com/watch?v=hqOsfS3dP9w&list=PLs4CJRBY5F1KDIN6pv6daYWN_RnFOYvt0&index=18">https://www.youtube.com/watch?v=hqOsfS3dP9w&amp;list=PLs4CJRBY5F1KDIN6pv6daYWN_RnFOYvt0&amp;index=18</a><br
+/>It's even in tutorial format, so great for learning!<br
+/><br
+/><br
+/># You only need to perform git configuration once on each computer from which you are using git<br
+/># These will be used to attribute your commits to you and to display nice readable names associated with those commits<br
+/>git config --global user.name bendmorris<br
+/>git config --global user.email ben@bendmorris.com<br
+/>git init # initialize a new repository i.e. the current working directory will become a repository. If you are outside that directory and run a git&nbsp; command, you will get an error<br
+/>git add *.py # adds all files with extension .py into stage<br
+/>git add . # add everything (use with care!!) into stage<br
+/>git add dir # add directory "dir" and all its contents<br
+/>git add -u # stage only files that have been updated and are already being tracked<br
+/>git status # Check current status, which files are new, which ones aren't yet committed<br
+/>git commit -m "adding the python files that we created up till now in Adelaide workshop" # moves all files from staging to the commit<br
+/># "git commit" without the "-m" will open your default text editor. This may be nano, vi, vim, gedit<br
+/>git log # see all commits with commit messages, dates etc. (use 'q' to exit)<br
+/>git diff # When run in the top level directory of the repo will show you a diff between your working directory and the local whole repository<br
+/><br
+/><br
+/><b>Git exercise 1</b><br
+/><br
+/>Create a README file, and commit it to your local repository<br
+/><br
+/>Extra credit: export the Etherpad, and commit that too<br
+/><br
+/></body>
+</html>
