@@ -12,6 +12,7 @@ def test_dna_starts_with_single_char():
 def test_dna_not_starts_with_single_char():
   assert not dna_starts_with('actgt','t')
 
+# you need to run the test functions
 test_dna_starts_with_self()
 test_dna_starts_with_single_char()
 test_dna_not_starts_with_single_char()
